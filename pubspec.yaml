@@ -36,6 +36,10 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.16.0
+  google_sign_in: ^6.2.1
+  flutter_local_notifications: ^17.2.2
 
 dev_dependencies:
   flutter_test:
@@ -59,8 +63,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/images/ioetLogo.png
-    - assets/images/ioetLogo.svg
+    - assets/images/ioetLogoBlur.png
     - assets/images/ioetLogoLeft.png
     - assets/images/background.svg
 

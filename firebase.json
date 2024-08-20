@@ -1,0 +1,25 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "lunch-n-learn-app",
+                    "appId": "1:157973788894:android:49628c5eaceb0c52bfaa4f",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "lunch-n-learn-app",
+                    "configurations": {
+                        "android": "1:157973788894:android:49628c5eaceb0c52bfaa4f",
+                        "ios": "1:157973788894:ios:aa14e893c5644566bfaa4f",
+                        "macos": "1:157973788894:ios:aa14e893c5644566bfaa4f",
+                        "web": "1:157973788894:web:49829526fcc11decbfaa4f",
+                        "windows": "1:157973788894:web:aeac6c3f48e7f993bfaa4f"
+                    }
+                }
+            }
+        }
+    }
+}
