@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:ioet_lunch_n_learn_frontend/pages/home_page.dart';
+import 'package:logger/logger.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -19,6 +20,7 @@ class _LoginPageState extends State<LoginPage> {
     Firebase.initializeApp();
     userCredential.value = await signInWithGoogle();
     if (userCredential.value != null) {
+      FirebaseAuth.instance.currentUser;
       // ignore: use_build_context_synchronously
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => const HomePage()));
@@ -26,6 +28,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Future<dynamic> signInWithGoogle() async {
+    var logger = Logger();
     try {
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
       final GoogleSignInAuthentication? googleAuth =
@@ -36,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
       );
       return await FirebaseAuth.instance.signInWithCredential(credential);
     } on Exception catch (e) {
-      print('exception->$e');
+      logger.e('Exception: $e');
     }
   }
 
